@@ -30,7 +30,7 @@ pub fn make_self<T>(s: &mut T) -> &'static mut T {
 impl PCatFS {
     pub fn new(fs: CatFS) -> PCatFS {
         PCatFS {
-            tp: ThreadPool::new(100),
+            tp: ThreadPool::new(10),
             fs: fs,
         }
     }
